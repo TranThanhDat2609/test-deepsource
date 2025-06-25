@@ -26,7 +26,7 @@ def main():
     x = calc_sum(5, 10)           # sẽ bị lỗi tại đây
     print("Sum:", x)
     print_items()
-    print("Done");;              # 💩 dấu chấm phẩy dư
+    print("Done");             # 💩 dấu chấm phẩy dư
 
 main()
 
