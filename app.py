@@ -2,31 +2,27 @@ import os
 
 def login(username, password):
     if username == "admin" and password == "123456":
-        print("Welcome admin")  # ❌ hardcoded password (bảo mật)
+        print("Welcome admin")  # hardcoded password (security)
     else:
         print("Access denied")
 
-
 def calc_sum(a, b):
-    result = a + b + ""  # ❌ lỗi: cộng số với chuỗi
+    result = a + b + ""  # bug: mixing int and str
     return result
-
 
 def print_items():
     items = [1, 2, 3, 4]
-    for i in range(len(items)):  # 💩 nên dùng for-in, không cần range(len())
+    for i in range(len(items)):  # style: use for-in loop instead
         print(i)
 
-    for i in range(1000000):  # 🐌 vòng lặp lớn không cần thiết
+    for _ in range(1000000):  # performance: useless loop
         pass
 
-
 def main():
-    login("admin", "123456")      # gọi hàm với mật khẩu cứng
-    x = calc_sum(5, 10)           # sẽ bị lỗi tại đây
+    login("admin", "123456")
+    x = calc_sum(5, 10)
     print("Sum:", x)
     print_items()
-    print("Done");             # 💩 dấu chấm phẩy dư
+    print("Done")
 
 main()
-
